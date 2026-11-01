@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101827">
+  <title>Organic Chemistry • Practice Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">OC</span><span>ORGANIC<span class="muted"> LAB</span><small>Class 12 • Practice system</small></span></a>
+    <div class="top-actions"><span id="save-status" class="save-status">● Saved locally</span><button class="ghost-btn" id="reset-all">Reset data</button></div>
+  </header>
+  <main class="shell">
+    <section class="hero">
+      <div><p class="eyebrow">CHAPTER 01 / CHEMISTRY</p><h1>Aldehydes, Ketones<br><span>& Carboxylic Acids</span></h1>
+      <p class="hero-copy">Choose topics, select practice phases, and attempt the complete question set. Your progress stays on this device.</p></div>
+      <div class="hero-stat"><strong id="overall-progress">0%</strong><span>OVERALL PROGRESS</span><div class="progress-track"><i id="overall-bar"></i></div></div>
+    </section>
+    <section class="dashboard">
+      <div class="section-heading"><div><p class="eyebrow">YOUR WORKSPACE</p><h2>Chapter dashboard</h2></div><span class="pill">Question bank • Offline</span></div>
+      <div class="stat-grid">
+        <article class="stat-card"><span>Questions available</span><strong id="total-questions">—</strong><small>Across selected subtopics</small></article>
+        <article class="stat-card"><span>Questions attempted</span><strong id="attempted-count">0</strong><small>Saved on this device</small></article>
+        <article class="stat-card"><span>Accuracy</span><strong id="accuracy">—</strong><small>Across completed attempts</small></article>
+      </div>
+    </section>
+    <section class="workspace">
+      <div class="section-heading"><div><p class="eyebrow">BUILD YOUR SESSION</p><h2>Choose what to practise</h2></div><div class="inline-actions"><button class="text-btn" id="select-all">Select all</button><button class="text-btn" id="clear-all">Clear</button></div></div>
+      <div class="phase-guide" id="phase-guide"></div>
+      <div id="topic-list" class="topic-list"></div>
+      <div class="launch-row"><div><strong id="selection-count">0 subtopics selected</strong><small id="selection-detail">Choose at least one subtopic and phase</small></div><button class="primary-btn" id="start-quiz" disabled>Start practice <span>→</span></button></div>
+    </section>
+    <section id="resume-panel" class="resume-panel hidden">
+      <div><p class="eyebrow">PICK UP WHERE YOU LEFT</p><h3>Continue your saved session</h3><p id="resume-text">Your unfinished session is available.</p></div>
+      <button class="secondary-btn" id="resume-quiz">Resume session →</button>
+    </section>
+    <section class="history-section">
+      <div class="section-heading"><div><p class="eyebrow">LEARNING INSIGHTS</p><h2>Recent performance</h2></div><button class="text-btn" id="clear-history">Clear history</button></div>
+      <div id="history-list" class="history-list"><p class="empty">No attempts yet. Your results will appear here.</p></div>
+    </section>
+  </main>
+  <section id="quiz-view" class="quiz-view hidden">
+    <div class="quiz-top"><button id="exit-quiz" class="ghost-btn">← Dashboard</button><div class="quiz-progress-label"><span id="quiz-position">Question 1 of 30</span><span id="quiz-phase">CONCEPT BUILDING</span></div><div class="progress-track"><i id="quiz-bar"></i></div></div>
+    <div class="quiz-card">
+      <div class="question-meta"><span id="question-topic">TOPIC</span><span id="question-number">01 / 30</span></div>
+      <h2 id="question-text">Question appears here</h2>
+      <div id="options" class="options"></div>
+      <div class="hint-wrap"><button id="hint-toggle" class="hint-btn">✦ Show hint</button><p id="hint-text" class="hint-text hidden"></p></div>
+      <div id="feedback" class="feedback hidden"></div>
+      <div class="quiz-footer"><button id="skip-question" class="text-btn">Skip for now</button><button id="next-question" class="primary-btn" disabled>Next question →</button></div>
+    </div>
+    <p class="local-note">Progress is automatically saved in this browser on this device.</p>
+  </section>
+  <section id="result-view" class="result-view hidden">
+    <div class="result-header"><p class="eyebrow">SESSION COMPLETE</p><h1>Your learning report</h1><p>Review your accuracy, revisit explanations, and identify topics that need more practice.</p></div>
+    <div class="result-score"><div><span>YOUR SCORE</span><strong id="result-percent">0%</strong><small id="result-fraction">0 correct out of 0 attempted</small></div><div class="score-ring" id="score-ring"><span id="ring-value">0%</span></div></div>
+    <div class="result-grid">
+      <article><span>Correct</span><strong id="result-correct">0</strong></article>
+      <article><span>Incorrect</span><strong id="result-wrong">0</strong></article>
+      <article><span>Skipped</span><strong id="result-skipped">0</strong></article>
+    </div>
+    <h2 class="report-title">Topic-wise analysis</h2><div id="topic-analysis" class="analysis-list"></div>
+    <h2 class="report-title">Review your answers</h2><div id="answer-review" class="answer-review"></div>
+    <div class="result-actions"><button class="secondary-btn" id="retry-weak">Practise weak topics</button><button class="primary-btn" id="back-dashboard">Back to dashboard →</button></div>
+  </section>
+  <footer><span>ORGANIC LAB</span><span>Built for focused Class 12 revision</span></footer>
+  <script src="aldehyde-ketone-ca.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
